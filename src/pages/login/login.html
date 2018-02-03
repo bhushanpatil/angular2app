@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>SchoolApps</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngIf="error" class="red">
+    {{error.message }}
+    </ion-item>
+    <ion-item>
+      <ion-label>Username</ion-label>
+      <ion-input type="text" [(ngModel)]="userData.phone" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="userData.password" required></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button color="primary" block (click)="login()">Sign In</button>
+    <a href="#" (click)="register()">Register</a>
+  </div>
+
+</ion-content>
